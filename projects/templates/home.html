@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<header class="row bg-black">
+  <div class="col-md-4">
+    <img src="{% static 'portafolio/Logo.jpg' %}" height="250px" width="250px" alt="Perfil">
+  </div>
+  <div class="col-md-8 my-auto">
+    <h3><strong>Marisquería Chávez</strong></h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Aspernatur earum voluptatum vitae cupiditate facere amet omnis quam magni voluptatibus rem tenetur, dignissimos perspiciatis atque? Harum a in dolorum cum eveniet!</p>
+    <a class="btn btn-danger btn-sm" href="{% static 'portafolio/Menu.pdf' %}" target="_blank">Download PDF</a>
+  </div>
+</header>
+<div class="row my-4 text-center">  
+  <h3>My projects</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Quia, et iusto consequatur magnam optio sunt at accusamus soluta ab doloremque nam molestiae mollitia cum necessitatibus itaque sapiente laborum dolor tempora?</p>
+  {% if projects %}
+    {% for project in projects %}
+
+    <div class="col-md-4 p-4">
+      
+      <div class="card bg-black card-project">
+        <img src="{{project.image.url}}" class="card-img-top" alt="{{project.title}}">
+        <div class="card-body">
+          <h2>{{project.title}}</h2> 
+          <p>{{rpoject.description}}</p>
+          <a class="btn btn-secondary rounded btn-sm" href="{{project.url}}" target="_blank">{{project.url}}</a>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  {% else %}
+  <h2>You don't have any projects!</h2>
+
+  {% endif%}
+</div>
+
+{%endblock%}

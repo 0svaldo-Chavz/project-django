@@ -1,0 +1,32 @@
+/* body {
+  background: #090909;
+} */
+
+.bg-black {
+  background: #000;
+}
+
+.card-project:hover {
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url("./svg/Sprinkle.svg");
+  background-repeat: no-repeat;
+  background-size: cover; /* o contain, dependiendo de tus necesidades */
+}
+
+#auth {
+  background: url("./svg/Shiny.svg");
+  background-repeat: no-repeat;
+  background-size: cover; /* o contain, dependiendo de tus necesidades */
+}
+
+.btn-auth {
+  background-color: rgb(1, 39, 1);
+} 
